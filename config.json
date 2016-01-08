@@ -1,18 +1,16 @@
 {
-  "APIKEY": "Add your Mailchimp API Key",
+  "APIKEY": "4608fc1d33db39e3969d460a65605638-us10",
 
   "testing": {
-    "from": "Email Address to send from",
-    "to": "Who do you want to send to? Comma separated",
-    "subject": "Subject for test email"
+    "from": "team@hacktj.org",
+    "to": "peter@hacktj.org",
+    "subject": "Test Email Design"
   },
 
   "auth": {
     "mailgun": {
-        "user": "SMTP User",
-        "pass": "SMTP Password"
+        "user": "postmaster@sandbox18220.mailgun.org",
+        "pass": "5hak127t9nu2"
     }
-  },
-
-  "litmus": "Your Litmus static email address"
+  }
 }

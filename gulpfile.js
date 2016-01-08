@@ -54,7 +54,7 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['sass', 'browser-sync', 'build', 'watch']);
+gulp.task('default', ['sass', 'build', 'watch']);
 
 // Add ability to send test emails
 gulp.task('send', function () {

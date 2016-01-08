@@ -1,7 +1,14 @@
 @import "mixins";
 
+$hacktj-primary: #A1B6D5;
+$text-color: #333333;
+
 html, body {
-	background: #CCC;
+	width: 100%;
+	height: 100%;
+	background: $hacktj-primary;
+	font-weight: 300;
+	color: white;
 }
 
 table {
@@ -9,44 +16,79 @@ table {
 }
 
 .wrapper {
-	background: #FFF;
-	max-width: 550px;
+	width: 100%;
+	max-width: 600px;
 	margin: 0 auto;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 
-	a {
-		color: #E82C0C;
-		text-decoration: none;
+	.headerText{
+		width: 100%;
+		text-align: center;
+		color: $hacktj-primary;
+		width: 100%;
+		font-size: 2px;
+	}
 
-		&:hover {
-			text-decoration: underline;
+	.header {
+		width: 100%;
+		display: block;
+		margin: 10px 0;
+		position: relative;
+		img.logo {
+			display: block;
+			float: left;
+			display: block;
+			width: 50%;
+			min-width: 100px;
+		}
+		.headertext{
+			position: absolute;
+			right: 10px;
+			bottom: -20px;
+			font-weight: 100;
 		}
 	}
 
-	img {
-		max-width: 100%;
-	}
+	.textbody {
+		display: block;
+		background: white;
+		padding: 10px 50px;
+		box-shadow: 0px 7px 7px rgba(51, 51, 51, 0.2);
+		color: $text-color;
+		a {
+			color: $hacktj-primary;
+			text-decoration: none;
 
-	.headerText {
-		color: #000;
-
-		p {
-			margin: 2px;
-			@include font-size(12px);
-		}
-	}
-
-	.mainBody > td > table {
-		padding: 0 20px;
-
-		td {
-			vertical-align: top;
-			width: 30%;
-
-			&:first-child {
-				padding-right: 20px;
-				width: 70%;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
+		a.button{
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+			margin: auto;
+			width: 60%;
+			box-shadow: 0;
+			text-decoration: none;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background: none;
+			overflow: hidden;
+			background: $hacktj-primary;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			position: relative;
+			color: white;
+			margin: auto;
+		}
+	}
+	.footer{
+		margin: 20px 0;
+		font-size: 0.7em;
+		color: white;
 	}
 }
