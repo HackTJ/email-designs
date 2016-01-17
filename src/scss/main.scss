@@ -1,6 +1,8 @@
 @import "mixins";
 
 $hacktj-primary: #A1B6D5;
+$green: #68bb68;
+$red: #EA5C5C;
 $text-color: #333333;
 
 html, body {
@@ -72,6 +74,9 @@ table {
 				text-decoration: underline;
 			}
 		}
+		.big{
+			font-size: 1.3em;
+		}
 		a.button{
 			-webkit-box-shadow: none;
 			-moz-box-shadow: none;
@@ -85,7 +90,6 @@ table {
 			height: 50px;
 			line-height: 50px;
 			text-align: center;
-			background: none;
 			overflow: hidden;
 			background: $hacktj-primary;
 			border-radius: 5px;
@@ -94,6 +98,45 @@ table {
 			position: relative;
 			color: white;
 			margin: auto;
+			&.half{
+				display: inline-block;
+				width: 48%;
+				&.right{
+					float: right;
+				}
+				&.left{
+					float: left;
+				}
+			}
+			&.outline{
+				background: none !important;
+				color: $hacktj-primary;
+				border: 1px solid $hacktj-primary;
+				&.red{
+					color: $red;
+					border-color: $red;
+					&:hover{
+						background: $red;
+					}
+				}
+				&.green{
+					color: $green;
+					border-color: $green;
+					&:hover{
+						background: $green;
+					}
+				}
+				&:hover{
+					background: $hacktj-primary;
+				}
+			}
+			&.red{
+				background: $red;
+			}
+			&.green{
+				background: $green;
+			}
+			transition: background 0.4s;
 		}
 	}
 	.footer{

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>[IMPORTANT] RSVP to save your spot at HackTJ!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="./../css/main.css" inline>
+	</head>
+	<body>
+		<table class="wrapper">
+			<tr class="headerText">
+				<td>
+					<p>Please let us know whether you're coming or not, so we can make sure everyone gets a chance to attend HackTJ!</p>
+				</td>
+			</tr>
+			<tr class="header">
+				<td>
+					<a href="https://hacktj.org/">
+						<img class="logo" src="https://hacktj.org/img/logo-email.png" alt="HackTJ">
+					</a>
+					<h4 class="headertext">RSVP to save your spot!</h4>
+				</td>
+			</tr>
+			<tr class="textbody">
+				<td>
+					<h3>Hey, {{firstname}}!</h3>
+					<p>We're thrilled that you signed up for HackTJ! We have some exciting things planned and it's going to be a ton of fun. We hope you're still able to come, but we understand that plans can change. <strong>To reserve your spot, you need to RSVP with one of the buttons below before Sunday, January 31st.</strong> We have over 100 students on the waitlist, and if you can't make it we'll give your spot to one of them.</p>
+					<br>
+					<p><strong class="big">Will you be attending HackTJ? (choose one)</strong></p>
+						<a class="button outline half green left" href="https://api.hacktj.org/rsvp/confirm/{{id}}" target="_blank">
+							I'll be there!
+						</a>
+						<a class="button outline half red right" href="https://api.hacktj.org/rsvp/cancel/{{id}}" target="_blank">
+							I can't make it.
+						</a>
+					</p>
+					<br>
+					<br>
+					<p><br>We appreciate your help in making sure we can welcome as many students as possible to HackTJ. If your plans change again after you've pressed one of the buttons above, just reply to this email to let us know.</p>
+
+					<p>As always, we're here to help you. Reply to this email or write to <a href="mailto:hello@hacktj.org">hello@hacktj.org</a> if you have any questions!
+					<br>
+					<p>
+					We hope to see you at HackTJ!
+					<br>
+					– The HackTJ Team
+					</p>
+				</td>
+			</tr>
+			<tr class="footer">
+				<td>
+					<p>
+						We sent you this email because you signed up for HackTJ. To unsubscribe, click <a href="https://api.hacktj.org/rsvp/cancel/{{id}}?reason=unsubscribe" target="_blank">here</a>.
+					</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
