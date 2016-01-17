@@ -6,9 +6,11 @@ $text-color: #333333;
 html, body {
 	width: 100%;
 	height: 100%;
-	background: $hacktj-primary;
+	@include linear-gradient($hacktj-primary, #82A3D5);
 	font-weight: 300;
 	color: white;
+	margin: 0;
+	padding: 0;
 }
 
 table {
@@ -16,12 +18,15 @@ table {
 }
 
 .wrapper {
-	width: 100%;
+	box-sizing: border-box;
+	width: 95%;
 	max-width: 600px;
 	margin: 0 auto;
+	margin-bottom: 50px;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 
 	.headerText{
+		box-sizing: border-box;
 		width: 100%;
 		text-align: center;
 		color: $hacktj-primary;
@@ -30,6 +35,7 @@ table {
 	}
 
 	.header {
+		box-sizing: border-box;
 		width: 100%;
 		display: block;
 		margin: 10px 0;
@@ -50,9 +56,12 @@ table {
 	}
 
 	.textbody {
+		box-sizing: border-box;
 		display: block;
+		width: 100%;
+		line-height: 1.4em;
 		background: white;
-		padding: 10px 50px;
+		padding: 10px 10%;
 		box-shadow: 0px 7px 7px rgba(51, 51, 51, 0.2);
 		color: $text-color;
 		a {
@@ -68,7 +77,8 @@ table {
 			-moz-box-shadow: none;
 			box-shadow: none;
 			margin: auto;
-			width: 60%;
+			width: 80%;
+			max-width: 300px;
 			box-shadow: 0;
 			text-decoration: none;
 			display: block;
@@ -87,7 +97,9 @@ table {
 		}
 	}
 	.footer{
+		box-sizing: border-box;
 		margin: 20px 0;
+		padding: 10px 0;
 		font-size: 0.7em;
 		color: white;
 	}

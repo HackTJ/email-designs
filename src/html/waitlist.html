@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>&lt;%subject%&gt;</title>
+		<title>{{subject}}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" href="./../css/main.css" inline>
 	</head>
@@ -10,7 +10,7 @@
 		<table class="wrapper">
 			<tr class="headerText">
 				<td>
-					<p>&lt;%intro_text%&gt;</p>
+					<p>A few days ago you signed up for the HackTJ student waitlist. Today, we're thrilled to be able to offer you a spot at HackTJ!</p>
 				</td>
 			</tr>
 			<tr class="header">
@@ -18,17 +18,17 @@
 					<a href="https://hacktj.org/">
 						<img class="logo" src="https://hacktj.org/img/logo-email.png" alt="HackTJ">
 					</a>
-					<h4 class="headertext">&lt;%header_text%&gt;</h4>
+					<h4 class="headertext">You're off the waitlist!</h4>
 				</td>
 			</tr>
 			<tr class="textbody">
 				<td>
-					<!-- &lt;%body%&gt; -->
-					<h3>Congratulations, [NAME]!</h3>
-					<p>A few days ago, you signed up for the HackTJ student waitlist. Today, we're thrilled to be able to offer you a spot at HackTJ! If you want to accept your spot, please <strong>click the button below in the next 48 hours</strong>. Otherwise, we'll offer your spot to another student on the waiting list.</p>
-					<a class="button" href="https://google.com" target="_blank">
+					<h3>Congratulations, {{firstname}}!</h3>
+					<p>A few days ago, you signed up for the HackTJ student waitlist. Today, we're thrilled to be able to offer you a spot at HackTJ! If you want to accept your spot, please <strong>click the button below in the next 48 hours</strong>. Otherwise, if you can't make it, we'll offer your spot to another student on the waiting list.</p>
+					<a class="button" href="https://api.hacktj.org/waitlist/promote/{{id}}" target="_blank">
 						I'll be there!
 					</a>
+					<p>If for some reason you can't make it, please click <a href="https://api.hacktj.org/waitlist/remove/{{id}}?reason=cant" target="_blank">here</a> so other students can get in from the waiting list.</p>
 					<p>As always, we're here to help you. Reply to this email or write to <a href="mailto:hello@hacktj.org">hello@hacktj.org</a> if you have any questions!
 					<br>
 					<p>
@@ -41,7 +41,7 @@
 			<tr class="footer">
 				<td>
 					<p>
-						We sent you this email because you signed up for the HackTJ waitlist. To unsubscribe, click <a href="https://hacktj.org/" target="_blank">here</a>.
+						We sent you this email because you signed up for the HackTJ waitlist. To unsubscribe, click <a href="https://api.hacktj.org/waitlist/remove/{{id}}?reason=unsubscribe" target="_blank">here</a>.
 					</p>
 				</td>
 			</tr>
